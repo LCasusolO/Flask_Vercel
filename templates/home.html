@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_home.css') }}">
+</head>
+<body>
+    <header>
+        <div id="header-logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+        </div>
+        <div id="header-image-container">
+            <img src="{{ url_for('static', filename='images/fondo.png') }}" alt="Header Image" id="header-image">
+            <h1 id="protocolo-title">PROTOCOLO WASH</h1>
+        </div>
+    </header>
+    <section id="protocol-description">
+        <p>Esta plataforma web contiene el protocolo para evaluar la situación del agua, el 
+            saneamiento y la higiene (WASH, por su sigla en inglés) en establecimientos de salud, 
+            con atención a la resiliencia al clima. Este protocolo representa una herramienta base 
+            para evaluar las condiciones actuales de un establecimiento de salud de forma objetiva 
+            y profunda, y ofrece un panorama de la situación del WASH en la región o país donde 
+            se aplique.
+        
+            El protocolo sigue dos herramientas principales: la determinación de una muestra 
+            significativa, respaldada estadísticamente con los datos de cada país, y un 
+            cuestionario compuesto por siete módulos: agua potable, saneamiento, higiene, 
+            residuos sólidos, limpieza, energía y medio ambiente, y gestión y fuerza laboral. 
+
+        </p>
+    </section>
+    <div class="buttons-container">
+        <a href="{{ url_for('muestra') }}" class="button">Cálculo de Muestra</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe08ZyThARzKJw5K4uiG3M-LAmWDvbLNEUJjl4XAxcSeBAcWQ/viewform?usp=sf_link" class="button">Ir al cuestionario</a>
+      </div>
+</body>
+</html>
