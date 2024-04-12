@@ -35,9 +35,9 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(255, 255, 255); /* O el color que prefieras */
-    font-size: 6em; /* Ajusta según la necesidad */
+    font-size: 3.5em; /* Ajusta según la necesidad */
     justify-content: center; /* Centra horizontalmente */
-
+    text-align: center;
 }
 
 #protocol-description {

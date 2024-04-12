@@ -5,14 +5,16 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Cambiado a flex-start para evitar el corte en el zoom 100% */
     background: #f5f6fa;
+    overflow-x: hidden; /* Asegúrate de que no haya desbordamiento horizontal */
 }
 
 .logo-container {
-    width: 30%; /* Igual al ancho del .container */
-    display: block; /* Permite usar margin: auto para centrar */
+    width: 30%;
+    display: block;
     margin-bottom: 20px;
+    margin-top: 20px; /* Agrega margen superior si es necesario */
 }
 
 .logo-container img {
@@ -29,8 +31,6 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
-/* Resto del CSS... */
 
 h2 {
     text-align: center;
@@ -70,6 +70,10 @@ input[type="submit"]:hover {
 @media (max-width: 768px) {
     .container {
         width: 90%; /* El formulario ocupará más ancho en pantallas más pequeñas */
+    }
+
+    .logo-container {
+        width: 90%;
     }
 }
 

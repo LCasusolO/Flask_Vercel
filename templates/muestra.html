@@ -2,44 +2,54 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calculadora de Tamaño de Muestra</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_calculo_muestra.css') }}">
 </head>
 
 <body>
-    <div class="logo-container">
-        <a href="/">
-            <img src="{{ url_for('static', filename='images/logo_inicio.png') }}" alt="Logo">
-        </a>
-    </div>
-
-    <div class="container">
-        <h2>Cálculo del Tamaño de la Muestra</h2>
-        <form action="/muestra" method="post">
-            <input type="number" name="K" placeholder="Coeficiente de confiabilidad (K): 1.96" required step="0.01" disabled>
-            <input type="number" name="p" placeholder="Proporción estimada (p): 0.25" required step="0.01" min="0" max="1" disabled>
-            <input type="number" name="N" placeholder="Tamaño del universo (N)" required step="1" min="1">
-            <input type="number" name="E" placeholder="Error muestral (E): 0.05" required step="0.01" min="0" max="1" disabled>
-            <input type="submit" value="Calcular">
-        </form>
-
-        {% if n is not none %}
-        <div class="resultado" {% if not resultado_visible %}style="display:none;"{% endif %}>
-            <div class="contenedor-resultado">
-                <h3>Resultado del Cálculo de Tamaño de Muestra</h3>
-                <div class="resultado_1">
-                    <p>Coeficiente de confiabilidad (K): {{ K }}</p>
-                    <p>Proporción estimada (p): {{ p }}</p>
-                    <p>Tamaño del universo (N): {{ N }}</p>
-                    <p>Error muestral (E): {{ E }}</p>
-                </div>
-                    <div class="resultado_2"><h4>El tamaño de muestra necesario es: {{ n }}</h4></div>
-            </div>  
-
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/logo_inicio.png') }}" alt="Logo">
+            </a>
         </div>
-        
-        {% endif %}
-
-    </div>
-</body>
+    
+        <div class="container">
+            <h2>Cálculo del Tamaño de la Muestra</h2>
+            <form action="/muestra" method="post">
+                <input type="number" name="K" placeholder="Coeficiente de confiabilidad (K): 1.96" required step="0.01" disabled>
+                <input type="number" name="p" placeholder="Proporción estimada (p): 0.25" required step="0.01" min="0" max="1" disabled>
+                <input type="number" name="N1" placeholder="Tamaño del universo del 1er Nivel de Atención (N1)" required step="1" min="1">
+                <input type="number" name="N2" placeholder="Tamaño del universo del 2do Nivel de Atención (N2)" required step="1" min="1">
+                <input type="number" name="N3" placeholder="Tamaño del universo del 3er Nivel de Atención (N3)" required step="1" min="1">
+                <input type="number" name="E" placeholder="Error muestral (E): 0.05" required step="0.01" min="0" max="1" disabled>
+                <input type="submit" value="Calcular">
+            </form>
+    
+            {% if n is not none %}
+            <div class="resultado" {% if not resultado_visible %}style="display:none;"{% endif %}>
+                <div class="contenedor-resultado">
+                    <h3>Resultado del Cálculo de Tamaño de Muestra</h3>
+                    <div class="resultado_1">
+                        <p>Coeficiente de confiabilidad (K): {{ K }}</p>
+                        <p>Proporción estimada (p): {{ p }}</p>
+                        <p>Tamaño del universo del 1er Nivel de Atención (N1): {{ N1 }}</p>
+                        <p>Tamaño del universo del 2do Nivel de Atención (N2): {{ N2 }}</p>
+                        <p>Tamaño del universo del 3er Nivel de Atención (N3): {{ N3 }}</p>
+                        <p>Error muestral (E): {{ E }}</p>
+                    </div>
+                        <div class="resultado_2">
+                            <h4>La submuestra del 1er Nivel de Atención: {{ n1 }}</h4>
+                            <h4>La submuestra del 2do Nivel de Atención: {{ n2 }}</h4>
+                            <h4>La submuestra del 3er Nivel de Atención: {{ n3 }}</h4>
+                            <h2>La muestra total es: {{ n }}</h2>
+                        </div>
+                </div>  
+    
+            </div>
+            
+            {% endif %}
+    
+        </div> 
+    </body>
 </html>
