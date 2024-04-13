@@ -104,9 +104,3 @@ body, html {
         height: auto;
     }
 }
-
-@media (max-width: 1350px) {
-    #protocolo-title {
-        font-size: 30px; /* Reducir el tamaño de la fuente para móviles */
-    }
-}
