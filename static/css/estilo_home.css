@@ -79,3 +79,28 @@ body, html {
     padding: 100px;
 
   }
+@media (max-width: 768px) {
+    #protocolo-title {
+        font-size: 3vh; /* Reducir el tamaño de la fuente para móviles */
+    }
+    
+    #protocol-description {
+        padding: 20px; /* Reducir el padding para móviles */
+        font-size: 1em; /* Reducir el tamaño de la fuente para móviles */
+    }
+
+    .buttons-container {
+        padding: 20px; /* Reducir el padding para móviles */
+    }
+
+    .button {
+        font-size: 1em; /* Reducir el tamaño de la fuente en los botones para móviles */
+        padding: 10px 15px; /* Reducir el padding de los botones */
+    }
+
+    /* Asegúrate de que las imágenes no sobrepasen el ancho de la pantalla */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
