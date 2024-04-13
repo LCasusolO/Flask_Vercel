@@ -79,7 +79,7 @@ body, html {
     padding: 100px;
 
   }
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     #protocolo-title {
         font-size: 3vh; /* Reducir el tamaño de la fuente para móviles */
     }
