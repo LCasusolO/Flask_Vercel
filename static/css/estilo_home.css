@@ -81,7 +81,7 @@ body, html {
   }
 @media (max-width: 900px) {
     #protocolo-title {
-        font-size: 2vh; /* Reducir el tamaño de la fuente para móviles */
+        font-size: 1em; /* Reducir el tamaño de la fuente para móviles */
     }
     
     #protocol-description {
@@ -104,14 +104,3 @@ body, html {
         height: auto;
     }
 }
-
-@media (max-width: 400px) {
-    #protocolo-title {
-        font-size: 0.7vh; /* Reducir el tamaño de la fuente para móviles */
-    }
-}
-    @media (max-width: 1350px) {
-    #protocolo-title {
-        font-size: 4vh; /* Reducir el tamaño de la fuente para móviles */
-    }
-    }
