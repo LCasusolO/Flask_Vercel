@@ -79,9 +79,9 @@ body, html {
     padding: 100px;
 
   }
-@media (max-width: 968px) {
+@media (max-width: 900px) {
     #protocolo-title {
-        font-size: 3vh; /* Reducir el tamaño de la fuente para móviles */
+        font-size: 2vh; /* Reducir el tamaño de la fuente para móviles */
     }
     
     #protocol-description {
